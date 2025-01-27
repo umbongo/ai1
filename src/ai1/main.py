@@ -18,8 +18,39 @@ def run():
     Run the crew.
     """
     inputs = {
-        'topic': 'AI LLMs',
-        'current_year': str(datetime.now().year)
+        "name": "Thomas Sulkiewicz",
+        "email": "thomas@thomas.fm",
+        "phone": "0498991000",
+        "personal_writeup": """
+        With over 20 years of experience in Information Technology I have worked
+        in almost every facet of the industry, including solutions architecture
+        and design, Microsoft/Linux systems engineering, software
+        engineering/development, business process engineering, and
+        people/process management. I particularly enjoy workshopping a new
+        infrastructure solution and then keeping watch over it as its being
+        built.
+
+        My strengths and key technologies are:
+
+        -   Overseeing the architecture/high-level design and implementation of
+            infrastructure projects.
+
+        -   Developing infrastructure solutions, specialising network
+            infrastructure.
+
+        -   A technical understanding of how infrastructure technologies work
+            and how to best put them to use.
+
+        -   Understanding design principles and best practices around network
+            infrastructure and systems development
+
+        -   Troubleshooting technical issues related to new and existing
+            infrastructure solutions
+
+        My current goals are to continue to provide technical leadership,
+        guidance and oversight to infrastructure delivery projects.
+        """,
+    "job_posting_url": "https://www.seek.com.au/job/81525135?ref=search-standalone&type=standard&origin=jobTitle#sol=cab886ddb0c1d7f330e6314ce37dcfaadd12eb97"
     }
     
     try:
@@ -33,7 +64,7 @@ def train():
     Train the crew for a given number of iterations.
     """
     inputs = {
-        "topic": "AI LLMs"
+        "job_posting_url": "https://www.seek.com.au/job/81525135?ref=search-standalone&type=standard&origin=jobTitle#sol=cab886ddb0c1d7f330e6314ce37dcfaadd12eb97"
     }
     try:
         Ai1().crew().train(n_iterations=int(sys.argv[1]), filename=sys.argv[2], inputs=inputs)

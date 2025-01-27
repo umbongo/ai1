@@ -27,6 +27,50 @@ crewai install
 - Modify `src/ai1/crew.py` to add your own logic, tools and specific args
 - Modify `src/ai1/main.py` to add custom inputs for your agents and tasks
 
+Agents
+The following agents are defined in the project:
+
+Researcher: Senior Tech Job Researcher
+
+Goal: Do amazing analysis on job postings to help job applicants
+Backstory: As a Job Researcher, your prowess in navigating and extracting critical information from job postings is unmatched.
+Profiler: Personal Profiler for Engineers
+
+Goal: Do incredible research on job applicants to help them stand out in the job market.
+Backstory: Equipped with analytical prowess, you dissect and synthesize information from diverse sources to craft comprehensive personal and professional profiles.
+Resume Strategist: Resume Strategist for Engineers
+
+Goal: Find all the best ways to make a resume stand out in the job market.
+Backstory: With a strategic mind and an eye for detail, you excel at refining resumes to highlight the most relevant skills and experiences.
+Interview Preparer: Interview Preparer for Engineers
+
+Goal: Create interview questions and talking points based on the resume and job requirements.
+Backstory: You prepare candidates for interviews by creating tailored questions and talking points.
+Tasks
+The following tasks are defined in the project:
+
+Profile Task:
+
+Agent: Profiler
+Description: Task for profiling job applicants.
+Resume Strategy Task:
+
+Agent: Resume Strategist
+Description: Task for developing resume strategies.
+Output: tailored_resume.md
+Interview Preparation Task:
+
+Agent: Interview Preparer
+Description: Task for preparing interview materials.
+Output: interview_materials.md
+Tools
+The project uses the following tools:
+
+crewAI: Framework for creating and managing AI agents and tasks.
+UV: Dependency management and package handling tool.
+OpenAI API: For leveraging GPT models.
+Serper API: For additional data and functionality.
+
 ## Running the Project
 
 To kickstart your crew of AI agents and begin task execution, run this from the root folder of your project:

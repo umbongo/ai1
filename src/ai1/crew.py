@@ -25,9 +25,23 @@ class Ai1():
 		)
 
 	@agent
-	def reporting_analyst(self) -> Agent:
+	def profiler(self) -> Agent:
 		return Agent(
-			config=self.agents_config['reporting_analyst'],
+			config=self.agents_config['profiler'],
+			verbose=True
+		)
+	
+	@agent
+	def resume_strategist(self) -> Agent:
+		return Agent(
+			config=self.agents_config['resume_strategist'],
+			verbose=True
+		)
+	
+	@agent
+	def interview_preparer(self) -> Agent:
+		return Agent(
+			config=self.agents_config['interview_preparer'],
 			verbose=True
 		)
 
@@ -41,10 +55,23 @@ class Ai1():
 		)
 
 	@task
-	def reporting_task(self) -> Task:
+	def profile_task(self) -> Task:
 		return Task(
-			config=self.tasks_config['reporting_task'],
-			output_file='report.md'
+			config=self.tasks_config['profile_task'],
+		)
+	
+	@task
+	def resume_strategy_task(self) -> Task:
+		return Task(
+			config=self.tasks_config['resume_strategy_task'],
+			output_file='tailored_resume.md'
+		)
+	
+	@task
+	def interview_preparation_task(self) -> Task:
+		return Task(
+			config=self.tasks_config['interview_preparation_task'],
+			output_file='interview_materials.md'
 		)
 
 	@crew
